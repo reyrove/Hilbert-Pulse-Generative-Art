@@ -1,196 +1,171 @@
 # Hilbert Pulse — Generative Art
 
-[![Live Demo](https://img.shields.io/badge/demo-live-green?style=for-the-badge)](https://reyrove.github.io/Hilbert-Pulse-Generative-Art)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-
-> **Generative Hilbert curve art.** Each refresh creates a unique space-filling Hilbert curve with harmonious color palettes, dark backgrounds, and organic line breaks.
-
-## 🎨 Live Demo
-
-<div align="center">
-  <a href="https://reyrove.github.io/Hilbert-Pulse-Generative-Art" target="_blank">
-    <img src="demo-screenshot.jpg" alt="Hilbert Pulse Website Demo" width="800" style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.4);"/>
-  </a>
-  <br><br>
-  <a href="https://reyrove.github.io/Hilbert-Pulse-Generative-Art" target="_blank">
-    <img src="https://img.shields.io/badge/🌐_View_Live_Demo-0a0a0a?style=for-the-badge&logo=githubpages&logoColor=white&color=c9a84c" alt="View Live Demo" width="300"/>
-  </a>
-  <br>
-  <em>Click the image or button to experience the generative art</em>
-</div>
-
-## 👕 Apparel Preview
-
-<div align="center">
-  <img src="Hilbert-Pulse.jpg" alt="Hilbert Pulse on T-Shirt" width="600" style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);"/>
-  <br>
-  <em>Hilbert Pulse artwork printed on a T-shirt</em>
-</div>
-
-## ✨ Features
-
-- **Hilbert Curve** — Classic space-filling fractal curve
-- **Harmonic Palettes** — 4 random harmonious colors per artwork
-- **Line Breaks** — Organic breaks in the curve for visual interest
-- **Random Transformations** — Rotation and scaling variations
-- **Dark Backgrounds** — Rich HSB dark color palettes
-- **Seed-Based** — Every composition is unique and reproducible via its seed
-- **Save & Share** — Download as PNG with seed in filename
-- **Apparel Mode** — Preview artwork on a T-shirt mockup
-- **Responsive** — Works on desktop, tablet, and mobile
-- **Pure JavaScript** — No external dependencies
-- **Keyboard Shortcuts**:
-  - `R` — Regenerate
-  - `S` — Save image
-  - `T` — Toggle apparel view
-
-## 🎨 Artwork Details
-
-| Parameter | Range | Description |
-|-----------|-------|-------------|
-| **Curve Order** | 4–8 | Hilbert curve complexity |
-| **Total Points** | 256–65,536 | Points in the curve |
-| **Colors** | 4 per artwork | Harmonious HSB palette |
-| **Background** | HSB | Dark, rich colors |
-| **Line Breaks** | 40% chance | Organic breaks in the curve |
-
-## 🌀 The Hilbert Curve
-
-The Hilbert curve is a continuous space-filling fractal curve. It has the unique property of visiting every point in a square grid exactly once while maintaining local continuity. The order of the curve determines its complexity:
-
-| Order | Grid Size | Total Points |
-|-------|-----------|--------------|
-| 4 | 16×16 | 256 |
-| 5 | 32×32 | 1,024 |
-| 6 | 64×64 | 4,096 |
-| 7 | 128×128 | 16,384 |
-| 8 | 256×256 | 65,536 |
-
-## 🚀 Quick Start
-
-### Local Development
-
-```bash
-# Clone the repository
-git clone https://github.com/reyrove/Hilbert-Pulse-Generative-Art.git
-
-# Navigate to the directory
-cd Hilbert-Pulse-Generative-Art
-
-# Open in browser
-open index.html
-# or use a live server
-```
-
-### Deploy to GitHub Pages
-
-1. Push to GitHub
-2. Go to Settings → Pages
-3. Select branch `main` and root folder
-4. Your site will be live at `https://reyrove.github.io/Hilbert-Pulse-Generative-Art`
-
-## 🧠 How It Works
-
-The artwork is generated using a deterministic random number generator, seeded by timestamp + random noise. Every refresh:
-
-1. **Setup**:
-   - Random Hilbert curve order (4-8)
-   - Random dark background (HSB color mode)
-   - Random base hue for color palette
-
-2. **Curve Generation**:
-   - Hilbert curve recursively generated
-   - Points scaled to fit canvas
-   - 60% chance to continue line, 40% chance to break
-
-3. **Coloring**:
-   - 4 harmonious colors from base hue
-   - Random color selection for each segment
-   - Smooth, vibrant palette
-
-4. **Rendering**:
-   - Dark background
-   - Colorful curve with organic breaks
-   - Optional rotation and scaling (50% chance)
-
-## 📁 File Structure
-
-```
-Hilbert-Pulse-Generative-Art/
-├── index.html          # Main application (all-in-one)
-├── Hilbert-Pulse.jpg   # T-shirt mockup image
-├── fav.svg             # Favicon
-├── demo-screenshot.jpg # Website demo screenshot
-├── README.md           # This file
-└── LICENSE             # MIT License
-```
-
-## 🛠️ Tech Stack
-
-- **Pure Vanilla HTML/CSS/JS** — No dependencies
-- **Canvas API** — 2D rendering
-- **HSB Color Model** — Color generation
-- **CSS Flexbox/Grid** — Responsive layout
-- **GitHub Pages** — Hosting
-
-## 🎯 Interactive Controls
-
-| Action | Keyboard | Button |
-|--------|----------|--------|
-| Regenerate | `R` | Click "regenerate" |
-| Save Image | `S` | Click "regenerate" |
-| Toggle Apparel | `T` | Click "apparel" |
-
-## 🎨 The Creative Process
-
-### Hilbert Curve
-The Hilbert curve is a space-filling fractal that creates beautiful, complex patterns. Its recursive nature produces intricate, maze-like paths that are both mathematical and artistic.
-
-### Harmonic Colors
-Colors are generated using HSB (Hue, Saturation, Brightness) with harmonious shifts:
-- Base hue determines the overall color direction
-- Three additional colors shift by 60°, 120°, and 180°
-- Brightness and saturation remain high for vibrant results
-
-### Organic Breaks
-The curve is broken randomly (40% chance per segment), creating organic, flowing patterns that feel more like drawn lines than perfect mathematical curves.
-
-### Random Transformations
-50% of the time, the curve is rotated and scaled, adding variety to the composition.
-
-## 📱 Responsive Design
-
-The application automatically adapts to:
-- Desktop screens
-- Tablets
-- Mobile phones
-- Landscape orientation
-- Various aspect ratios
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to:
-- Fork the repository
-- Create a feature branch
-- Submit a pull request
-
-### Ideas for Contributions:
-- Additional curve types
-- New color palettes
-- Animation features
-- Interactive controls
-- Performance optimizations
-
-## 📄 License
-
-MIT License — see [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Inspired by the Hilbert curve and fractal art
-- Pure JavaScript implementation
-- Special thanks to the creative coding community
+> A seed-based generative system for space-filling Hilbert curve compositions.  
+> A reproducible catalogue of computational curve studies.
 
 ---
 
-**Built with ❤️ and space-filling curves**
+## What is this?
+
+**Hilbert Pulse** is a generative design system built around the Hilbert curve — a single continuous path that visits every cell of a square grid without ever crossing itself. That path is broken into coloured segments, layered over a dark field, and rotated and scaled by a single numeric seed into a dense, rhythmic weave of line and hue.
+
+Every artwork in this catalogue is defined by a single numeric seed. The same seed always produces the identical composition — making each piece **traceable, reproducible, and licensable** across textile, print, and apparel applications.
+
+Named for the space-filling curve first described by David Hilbert in 1891, **Hilbert Pulse** reframes that mathematical object as a textile.
+
+---
+
+## Live
+
+🌐 **[View the catalogue →](https://reyrove.github.io/Hilbert-Pulse/)**
+
+---
+
+## The System
+
+The generator combines two layers:
+
+| Layer | Description |
+|-------|-------------|
+| **Hilbert path** | A recursive space-filling curve drawn at order 4 to 8 — up to 65,536 points. |
+| **Colour pulses** | The path is broken into segments, each tinted from a 4-colour palette derived from a seeded base hue. |
+
+Both layers are driven by the same seed, ensuring deterministic output.
+
+### Parameters
+
+- **Order** — 4 to 8 (grid of 2ⁿ × 2ⁿ cells)
+- **Total points** — 2ⁿ × 2ⁿ (256 to 65,536)
+- **Palette** — 4 colours drawn from HSB space, each offset from a base hue by 0°, 60°, 120°, 180°
+- **Stroke weight** — scaled to canvas size, seeded
+- **Segment breaks** — 60% continue, 40% break
+- **Transform** — optional rotation (0–45°) and scale (0.5–2.0×)
+- **Background** — a bright HSB field (saturation 255, brightness 60–100)
+
+---
+
+## Structure
+
+```
+Hilbert-Pulse/
+├── index.html              ← Full catalogue (single-file)
+├── images/
+│   ├── fav.svg
+│   ├── hilbert-tote.png
+│   ├── hilbert-cushion.png
+│   └── ...
+├── Hilbert-Pulse.jpg       ← Apparel mockup
+└── README.md
+```
+
+The entire project is contained in a single `index.html` — no build step, no dependencies, no framework. Open it in any modern browser.
+
+---
+
+## Features
+
+- **Seed-based generation** — every composition is deterministic and reproducible
+- **Live catalogue** — cover, statement, plate, surfaces, process, archive, commission sections
+- **Multiple surfaces** — print, scarf, textile, wallpaper — all rendered from the same seed
+- **Archive of 8 seeds** — click any plate to load it into the main view
+- **PNG export** — download any composition directly from the browser
+- **Keyboard shortcuts** — `R` for new seed, `S` to save
+- **Legal modal** — licensing, terms, and credits built in
+- **Responsive** — works on desktop, tablet, and mobile
+- **Mobile-first navbar** — horizontally scrollable with fade hint
+
+---
+
+## Usage
+
+### Generate a new composition
+
+Click **New Seed** or press `R`.
+
+### Download the current composition
+
+Click **Download** or press `S`.
+
+### Load a seed from the archive
+
+Click any plate in the **Archive** section.
+
+---
+
+## Color System
+
+Every composition is built from HSB colour, converted to RGB at draw time:
+
+- **Background** — a bright HSB field (saturation 255, brightness 60–100)
+- **Base hue** — the starting hue for the palette
+- **Palette** — 4 colours at offsets 0°, 60°, 120°, 180° from the base, with saturation 200 and brightness 255
+- **Stroke weight** — scaled to canvas size, bounded per seed
+
+Each seed selects a unique combination — no two compositions share the same palette.
+
+---
+
+## Technical Notes
+
+- Pure vanilla JavaScript — no libraries
+- Canvas 2D rendering
+- Custom xorshift random generator for deterministic seeds
+- Device-pixel-ratio aware rendering
+- Fully static rendering — one seed produces one composition, no animation loops
+- Single `renderStatic()` function drives the cover, plate, framed print, all four surfaces, and all eight archive thumbnails
+- Recursive Hilbert curve generation in place (no lookup tables)
+- Segment breaks drawn as separate paths for the woven, stitched appearance
+- `prefers-reduced-motion` respected
+
+---
+
+## About
+
+**Hilbert Pulse** is a project by [Reyhaneh Daneshdoost](https://reyrove.github.io/) — an Iranian-born artist working at the intersection of classical textile logic and generative systems.
+
+The work begins with a simple observation: the woven surface — repetitive, mathematically structured, infinitely variable — has always been a form of computation, long before computers.
+
+**Hilbert Pulse** is an attempt to render that logic visible.
+
+> *A single line, folded through space until it touches every point of the field.*
+
+---
+
+## Licensing
+
+All compositions are seed-documented and available for licensing across textile, surface, and apparel applications.
+
+For commercial use, custom editions, or exclusive rights:
+
+📧 **reyhanehdaneshdoost@gmail.com**
+
+See the **Licensing** section in the live catalogue for details.
+
+---
+
+## Links
+
+- 🌐 [Website](https://reyrove.github.io/)
+- 📷 [Instagram](https://www.instagram.com/rey._.rove/)
+- 💼 [LinkedIn](https://www.linkedin.com/in/reyhaneh-daneshdoost-730481160/)
+- 🐦 [X](https://x.com/reyrove)
+
+---
+
+## Credits
+
+**Design & Generative System**  
+Reyhaneh Daneshdoost
+
+**Typefaces**  
+Cormorant Garamond · DM Mono
+
+**Edition**  
+Hilbert Pulse — Autumn 2026
+
+---
+
+<p align="center">
+  <em>Generative Space-Filling Curve</em><br />
+  <sub>© Reyrove Studio · All compositions reproducible by seed</sub>
+</p>
